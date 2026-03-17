@@ -52,13 +52,7 @@ const Hero = () => {
           alt="Fly Bird Logo"
           className="w-96 md:w-[48rem] lg:w-[60rem] max-w-full h-auto object-contain drop-shadow-2xl"
           animate={{ y: [0, -14, 0] }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,        // ✅ يفضل يلف للأبد
-            repeatType: "loop",      // ✅ loop مش bounce عشان ما يقطعش
-            ease: "easeInOut",
-            delay: 1.5,
-          }}
+          
         />
       </motion.div>
 

@@ -47,12 +47,19 @@ const ServicesSection = () => {
       <div className="container mx-auto px-4 py-16">
 
         {/* Heading - no animation */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-[#d87731]">Our Services</h2>
-          <p className="mt-4 text-sm font-medium text-gray-600">
-            Get to know our services
-          </p>
-        </div>
+    <div className="text-center mb-12">
+  <div className="inline-block">
+    <h2 className="text-4xl font-bold text-[#d87731]">
+      Our Services
+    </h2>
+
+    <span className="block mt-2 h-[2px] w-full bg-gradient-to-r from-[#f59e66] via-[#d87731] to-[#9a4d1f]"></span>
+  </div>
+
+  <p className="mt-4 text-sm font-medium text-gray-600">
+    Get to know our services
+  </p>
+</div>
 
         {/* Cards Grid - no scroll animation, only hover interactions */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
