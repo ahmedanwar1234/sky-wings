@@ -32,7 +32,7 @@ const ContactUs = () => {
             {/* Right - Button */}
             <Link
               href="/contact"
-              className="flex items-center gap-2 self-start md:self-auto bg-[#D4AF37] hover:bg-white hover:text-[#D4AF37] text-white font-semibold text-sm md:text-base px-5 py-3 rounded-lg transition-all duration-300 whitespace-nowrap"
+              className="flex items-center gap-2 self-start md:self-auto bg-[#D4AF37] hover:bg-white hover:text-[#D4AF37] text-white font-semibold text-sm md:text-base px-5 py-3  transition-all duration-300 whitespace-nowrap"
             >
               <FaPhoneAlt className="w-4 h-4" />
               Contact Us

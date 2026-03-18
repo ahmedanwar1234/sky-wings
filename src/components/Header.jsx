@@ -15,7 +15,7 @@ const Header = () => {
   ];
 
   const linkClass = (href) =>
-    `border-b-2 font-bold text-[15px] transition-all duration-300 ease-in-out hover:text-gray-500 hover:border-gray-500 ${
+    `border-b-2 font-bold text-[15px] md:text-[16px] transition-all duration-300 ease-in-out hover:text-gray-500 hover:border-gray-500 ${
       pathname === href
         ? "text-gray-500 border-none"
         : "text-[#D4AF37] border-transparent"
@@ -27,7 +27,9 @@ const Header = () => {
 
         {/* Logo */}
         <div>
-          <img src="/logo1.png" alt="Fly Bird Logo" className="w-34 h-auto object-contain" />
+          <Link href="/">
+            <img src="/logo1.png" alt="Fly Bird Logo" className="w-34 h-auto object-contain" />
+          </Link>
         </div>
 
         {/* Hamburger Button */}

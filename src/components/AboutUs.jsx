@@ -1,4 +1,5 @@
 "use client";
+import Link from 'next/link';
 import React from 'react';
 
 const AboutUs = () => {
@@ -42,9 +43,12 @@ const AboutUs = () => {
             </p>
 
             {/* Button */}
-            <button className="bg-[#D4AF37] text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-blue-800 hover:shadow-xl transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300">
-              ABOUT US
-            </button>
+            <Link
+              href="/about"
+              className="flex items-center gap-2 self-start md:self-auto bg-[#D4AF37] hover:bg-white hover:text-[#D4AF37] text-white font-semibold text-sm md:text-base px-10 py-3  transition-all duration-300 whitespace-nowrap"
+            >
+              About Us
+            </Link>
 
           </div>
         </div>
