@@ -11,20 +11,20 @@ export default function Home() {
   return (
     <div>
 
-    <div className="relative">
+    <div className="relative min-h-screen ">
       {/* Background Video for Header and Hero Section */}
-      <div className="absolute inset-0 z-0">
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-[calc(100vh)] object-cover"
-        >
-          <source src="/herovideo2.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-0 bg-black opacity-50"></div>
-      </div>
+     <div className="absolute inset-0 z-0">
+  <video
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="w-full h-full object-cover" 
+  >
+    <source src="/herovideo2.mp4" type="video/mp4" />
+  </video>
+  <div className="absolute inset-0 bg-black opacity-40"></div>
+</div>
       
       {/* Content Sections */}
       <div className="relative z-10">
