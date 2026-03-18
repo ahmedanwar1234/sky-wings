@@ -10,7 +10,7 @@ const Hero = () => {
 
       {/* Text Block */}
       <div className="w-full md:w-150 text-center mb-8 md:mb-0 flex flex-col items-center justify-center">
-        <h1 className="text-4xl text-[#D4AF37] md:text-7xl font-bold mb-4 whitespace-nowrap">
+        <h1 className="text-3xl text-[#D4AF37] md:text-7xl font-bold mb-4 whitespace-nowrap">
           Sky Wings Aviation
         </h1>
         <p className="text-[16px] text-gray-300 text-center md:text-xl">
