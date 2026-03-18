@@ -15,7 +15,7 @@ const Header = () => {
   ];
 
   const linkClass = (href) =>
-    `border-b-2 font-bold text-[15px] md:text-[16px] transition-all duration-300 ease-in-out hover:text-white hover:border-gray-500 ${
+    `border-b-2 font-bold text-[15px] md:text-[16px] transition-all duration-300 ease-in-out  hover:text-gray-600 md:hover:text-white hover:border-gray-500 ${
       pathname === href
         ? "text-gray-600 md:text-white border-none"
         : "text-[#D4AF37] border-transparent"
@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header className="text-white relative">
-      <div className="container mx-auto flex justify-between items-center py-8 md:pt-10 px-5 md:w-[60%] md:px-0">
+      <div className="container mx-auto flex justify-between items-center   md:py-8 md:pt-10 px-5 md:w-[60%] md:px-0">
 
         {/* Logo */}
         <div>
