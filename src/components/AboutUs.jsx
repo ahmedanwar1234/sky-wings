@@ -6,7 +6,7 @@ const AboutUs = () => {
   return (
     <section className="py-16 bg-gray-100">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center">
+        <div className="flex flex-col md:flex-row  items-center">
 
           {/* Image */}
           <div className="md:w-1/2 mb-8 md:mb-0">
@@ -18,7 +18,7 @@ const AboutUs = () => {
           </div>
 
           {/* Text Block */}
-          <div className="flex flex-col gap-4 md:gap-6 px-4 md:px-0 text-center md:text-left items-center md:items-start">
+          <div className="flex flex-col   gap-4 md:gap-6 px-4 md:px-0 text-center md:text-left items-center md:items-start">
 
             {/* Heading Row */}
             <div className="flex items-center gap-3">
@@ -45,7 +45,7 @@ const AboutUs = () => {
             {/* Button */}
             <Link
               href="/about"
-              className="flex items-center gap-2 self-start md:self-auto bg-[#D4AF37] hover:bg-white hover:text-[#D4AF37] text-white font-semibold text-sm md:text-base px-10 py-3  transition-all duration-300 whitespace-nowrap"
+              className="flex max-md:mx-auto items-center gap-2 self-start md:self-auto bg-[#D4AF37] hover:bg-white hover:text-[#D4AF37] text-white font-semibold text-sm md:text-base px-10 py-3  transition-all duration-300 whitespace-nowrap"
             >
               About Us
             </Link>
