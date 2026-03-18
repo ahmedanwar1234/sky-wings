@@ -15,9 +15,9 @@ const Header = () => {
   ];
 
   const linkClass = (href) =>
-    `border-b-2 font-bold text-[15px] md:text-[16px] transition-all duration-300 ease-in-out hover:text-gray-500 hover:border-gray-500 ${
+    `border-b-2 font-bold text-[15px] md:text-[16px] transition-all duration-300 ease-in-out hover:text-white hover:border-gray-500 ${
       pathname === href
-        ? "text-gray-500 border-none"
+        ? "text-gray-600 md:text-white border-none"
         : "text-[#D4AF37] border-transparent"
     }`;
 
@@ -34,7 +34,7 @@ const Header = () => {
 
         {/* Hamburger Button */}
         <button
-          className="md:hidden text-black mb-7 focus:outline-none"
+          className="md:hidden text-white mb-7 focus:outline-none"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
         >

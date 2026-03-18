@@ -10,26 +10,35 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <div>
-      {/* <div
-        className=" 
-       md:flex-row justify-center md:justify-around items-center h-[calc(100vh)] bg-cover bg-center overflow-hidden"
-        style={{ backgroundImage: "url('/test.png')" }}>
 
-    <Header/>
-      <Hero/>
-      </div> */}
-      <Header/>
-      <Hero/>
-    <AboutUs/>
-    <div className=" bg-black h-full w-full">
-    <OurServices/>
-    </div>
-    <ContactUs/>
-    <Footer/>
-    <div>
+    <div className="relative">
+      {/* Background Video for Header and Hero Section */}
+      <div className="absolute inset-0 z-0">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-[calc(100vh)] object-cover"
+        >
+          <source src="/herovideo2.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black opacity-50"></div>
+      </div>
       
+      {/* Content Sections */}
+      <div className="relative z-10">
+        <Header/>
+        <Hero/>
+      </div>
     </div>
-
+      
+      <AboutUs/>
+      <div className=" bg-black h-full w-full">
+        <OurServices/>
+      </div>
+      <ContactUs/>
+      <Footer/>
     </div>
   );
 }
