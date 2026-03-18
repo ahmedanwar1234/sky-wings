@@ -4,7 +4,7 @@ import React from 'react'
 
 const Hero = () => {
   return (
- <div className="relative px-10 flex flex-col md:flex-row justify-center md:justify-around items-center h-[calc(100vh-204px)] bg-[url('https://dreamlinerav.com/wp-content/uploads/2025/09/image-1.png')] bg-cover bg-center overflow-hidden">
+ <div className="relative px-10 flex flex-col md:flex-row justify-center md:justify-around items-center h-[calc(100vh-204px)] bg-[url('/image.png')] bg-cover bg-center overflow-hidden">
 
       {/* Overlay */}
       <motion.div
@@ -22,7 +22,7 @@ const Hero = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <motion.h1
-          className="text-3xl text-[#d87731] md:text-6xl font-bold mb-4"
+          className="text-3xl text-[#D4AF37] md:text-6xl font-bold mb-4"
           initial={{ opacity: 0, x: -60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, delay: 0.2, ease: "easeOut" }}

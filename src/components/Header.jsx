@@ -19,7 +19,7 @@ const Header = () => {
     `border-b-2 font-bold text-[15px] transition-all duration-300 ease-in-out hover:text-gray-500 hover:border-gray-500 ${
       pathname === href
         ? "text-gray-500 border-none"
-        : "text-[#d87731] border-transparent"
+        : "text-[#D4AF37] border-transparent"
     }`;
 
   return (
