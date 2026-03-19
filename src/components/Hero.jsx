@@ -13,7 +13,7 @@ const Hero = () => {
         <h1 className="text-3xl text-[#D4AF37] md:text-7xl font-bold mb-4 whitespace-nowrap">
           Sky Wings Aviation
         </h1>
-        <p className="text-[16px] text-gray-300 text-center md:text-xl">
+        <p className="text-[16px] dark:text-white text-gray-300 text-center md:text-xl">
           Aircraft ground handling services that operate 24/7 to ensure continuous, reliable support.
         </p>
       </div>

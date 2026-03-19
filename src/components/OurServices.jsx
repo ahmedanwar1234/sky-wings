@@ -12,9 +12,8 @@ const ServicesSection = () => {
   const services = [
     {
       id: 1,
-      title: "Charter",
-      description: "Fast, flexible charter flights tailored to your schedule and route.",
-      image: "charter.jpg",
+      title: "Charter & VIP Jet Services",
+  description: "Private charter flights & exclusive VIP jet experiences with white-glove service, tailored to your schedule.",      image: "charterr.jpg",
       alt: "Charter Service Illustration",
     },
     {
@@ -31,6 +30,28 @@ const ServicesSection = () => {
       image: "passenger-handeling.jpg",
       alt: "Passenger Handling Service Illustration",
     },
+    {
+      id: 4,
+      title: "Aviation Security Services",
+      description: "Comprehensive aviation security solutions ensuring the safety of passengers, crew, and assets at every touchpoint.",
+      image: "aviation-security.jpg",
+      alt: "Aviation Security Service Illustration",
+    },
+  
+    {
+      id: 6,
+      title: "Fuel Supply Management",
+      description: "Reliable, cost-effective fuel supply and management services with real-time monitoring and global network support.",
+      image: "fuel.jpg",
+      alt: "Fuel Supply Management Illustration",
+    },
+    {
+      id: 7,
+      title: "Flight Permits",
+      description: "Streamlined flight permit processing and regulatory coordination across all jurisdictions — fast, accurate, and hassle-free.",
+      image: "flight.jpg",
+      alt: "Flight Permits Service Illustration",
+    },
   ];
 
   useEffect(() => {
@@ -46,21 +67,20 @@ const ServicesSection = () => {
     >
       <div className="container mx-auto px-4 py-16">
 
-        {/* Heading - no animation */}
-      <div className="text-center mb-12">
-  <div className="inline-block">
-    <h2 className="text-4xl font-bold text-[#D4AF37]">
-      Our Services
-    </h2>
+        {/* Heading */}
+        <div className="text-center mb-12">
+          <div className="inline-block">
+            <h2 className="text-4xl font-bold text-[#D4AF37]">
+              Our Services
+            </h2>
+            <span className="block mt-2 h-[2px] w-full bg-gradient-to-r from-[#f59e66] via-[#d87731] to-[#D4AF37]"></span>
+          </div>
+          <p className="mt-4 text-sm font-medium text-gray-600">
+            Get to know our services
+          </p>
+        </div>
 
-    <span className="block mt-2 h-[2px] w-full bg-gradient-to-r from-[#f59e66] via-[#d87731] to-[#D4AF37]"></span>
-  </div>
-
-  <p className="mt-4 text-sm font-medium text-gray-600">
-    Get to know our services
-  </p>
-</div>
-        {/* Cards Grid - no scroll animation, only hover interactions */}
+        {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service) => (
             <div
@@ -90,7 +110,7 @@ const ServicesSection = () => {
                 }}
               />
 
-              {/* Gradient overlay - darkens more on hover */}
+              {/* Gradient overlay */}
               <motion.div
                 className="absolute inset-0"
                 animate={{
@@ -103,50 +123,49 @@ const ServicesSection = () => {
               />
 
               {/* Card Content */}
-              {/* Card Content */}
-<div className="absolute bottom-0 p-6 w-full">
-  
-  {/* Title - always visible at bottom, no movement */}
-  <h3 className="text-2xl font-bold text-white ">
-    {service.title}
-  </h3>
+              <div className="absolute bottom-0 p-6 w-full">
 
-  {/* Description fades in on hover */}
-  <motion.p
-    className="text-gray-300 text-sm mb-3 leading-relaxed"
-    initial={{ opacity: 0, height: 0 }}
-    animate={{
-      opacity: isHovered === service.id ? 1 : 0,
-      height: isHovered === service.id ? "auto" : 0,
-    }}
-    transition={{ duration: 0.4, ease: SMOOTH }}
-  >
-    {service.description}
-  </motion.p>
+                {/* Title */}
+                <h3 className="text-2xl font-bold text-white">
+                  {service.title}
+                </h3>
 
-  {/* Button fades in on hover */}
-  <motion.div
-    initial={{ opacity: 0, y: 10 }}
-    animate={{
-      opacity: isHovered === service.id ? 1 : 0,
-      y: isHovered === service.id ? 0 : 10,
-    }}
-    transition={{ duration: 0.4, delay: 0.05, ease: SMOOTH }}
-  >
-    <button
-      className="flex items-center gap-2 px-4 py-2 bg-[#D4AF37] hover:bg-blue-800 text-white rounded-md transition-colors duration-300"
-      aria-label={`Explore more about ${service.title}`}
-    >
-      Explore more
-      <motion.span
-        animate={{ x: isHovered === service.id ? 4 : 0 }}
-        transition={{ duration: 0.3, ease: SMOOTH }}
-      >
-        <FaArrowRight />
-      </motion.span>
-    </button>
-  </motion.div>
-</div>
+                {/* Description fades in on hover */}
+                <motion.p
+                  className="text-gray-300 text-sm mb-3 leading-relaxed"
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{
+                    opacity: isHovered === service.id ? 1 : 0,
+                    height: isHovered === service.id ? "auto" : 0,
+                  }}
+                  transition={{ duration: 0.4, ease: SMOOTH }}
+                >
+                  {service.description}
+                </motion.p>
+
+                {/* Button fades in on hover */}
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{
+                    opacity: isHovered === service.id ? 1 : 0,
+                    y: isHovered === service.id ? 0 : 10,
+                  }}
+                  transition={{ duration: 0.4, delay: 0.05, ease: SMOOTH }}
+                >
+                  <button
+                    className="flex items-center gap-2 px-4 py-2 bg-[#D4AF37] hover:bg-blue-800 text-white rounded-md transition-colors duration-300"
+                    aria-label={`Explore more about ${service.title}`}
+                  >
+                    Explore more
+                    <motion.span
+                      animate={{ x: isHovered === service.id ? 4 : 0 }}
+                      transition={{ duration: 0.3, ease: SMOOTH }}
+                    >
+                      <FaArrowRight />
+                    </motion.span>
+                  </button>
+                </motion.div>
+              </div>
             </div>
           ))}
         </div>

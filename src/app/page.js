@@ -51,7 +51,7 @@ export default function Home() {
         <OurServices/>
       </div>
       <ContactUs/>
-      <Footer/>
+      
     </div>
   );
 }
