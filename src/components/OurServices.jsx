@@ -2,12 +2,16 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight, FaSun, FaMoon } from "react-icons/fa";
+import Image from "next/image";
 
 const SMOOTH = [0.25, 0.46, 0.45, 0.94];
 
 const ServicesSection = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [isHovered, setIsHovered] = useState(null);
+const MotionImage = motion(Image);
+  const [imgError, setImgError] = useState({});
+
 
   const services = [
     {
@@ -95,19 +99,18 @@ const ServicesSection = () => {
               aria-label={service.title}
             >
               {/* Image with zoom on hover */}
-              <motion.img
-                src={service.image}
+        <MotionImage
+                src={imgError[service.id] ? FALLBACK : `/${service.image}`}
                 alt={service.alt}
-                className="absolute w-full h-full object-cover"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                quality={75}
+                className="object-cover"
                 animate={{
                   scale: isHovered === service.id ? 1.08 : 1,
                 }}
                 transition={{ duration: 0.6, ease: SMOOTH }}
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.src =
-                    "https://images.unsplash.com/photo-1516383740770-fbcc5ccbece0";
-                }}
+                onError={() => setImgError((prev) => ({ ...prev, [service.id]: true }))}
               />
 
               {/* Gradient overlay */}
