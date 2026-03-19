@@ -99,19 +99,25 @@ const MotionImage = motion(Image);
               aria-label={service.title}
             >
               {/* Image with zoom on hover */}
-        <MotionImage
-                src={imgError[service.id] ? FALLBACK : `/${service.image}`}
-                alt={service.alt}
-                fill
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                quality={75}
-                className="object-cover"
-                animate={{
-                  scale: isHovered === service.id ? 1.08 : 1,
+           <div
+                className="absolute w-full h-full"
+                style={{
+                  transform: isHovered === service.id ? "scale(1.08)" : "scale(1)",
+                  transition: isHovered === service.id
+                    ? "transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)"
+                    : "transform 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
                 }}
-                transition={{ duration: 0.6, ease: SMOOTH }}
-                onError={() => setImgError((prev) => ({ ...prev, [service.id]: true }))}
-              />
+              >
+                <Image
+                  src={imgError[service.id] ? FALLBACK : `/${service.image}`}
+                  alt={service.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={75}
+                  className="object-cover"
+                  onError={() => setImgError((prev) => ({ ...prev, [service.id]: true }))}
+                />
+              </div>
 
               {/* Gradient overlay */}
               <motion.div
