@@ -66,7 +66,7 @@ const MotionImage = motion(Image);
   return (
     <div
       className={`min-h-screen ${
-        darkMode ? "dark bg-gray-900" : "bg-gray-50"
+        darkMode ? "dark bg-gray-900" : "bg-gray-100"
       } transition-colors duration-500 bg-[url('/bg-section-02.png')] bg-cover bg-center`}
     >
       <div className="container mx-auto px-4 py-16">
@@ -99,16 +99,7 @@ const MotionImage = motion(Image);
               aria-label={service.title}
             >
               {/* Image with zoom on hover */}
-           <div
-                className="absolute w-full h-full"
-                style={{
-                  transform: isHovered === service.id ? "scale(1.08)" : "scale(1)",
-                  transition: isHovered === service.id
-                    ? "transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)"
-                    : "transform 1.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)",
-                }}
-              >
-                <Image
+           <Image
                   src={imgError[service.id] ? FALLBACK : `/${service.image}`}
                   alt={service.alt}
                   fill
@@ -117,7 +108,6 @@ const MotionImage = motion(Image);
                   className="object-cover"
                   onError={() => setImgError((prev) => ({ ...prev, [service.id]: true }))}
                 />
-              </div>
 
               {/* Gradient overlay */}
               <motion.div
@@ -162,7 +152,7 @@ const MotionImage = motion(Image);
                   transition={{ duration: 0.4, delay: 0.05, ease: SMOOTH }}
                 >
                   <button
-                    className="flex items-center gap-2 px-4 py-2 bg-[#D4AF37] hover:bg-blue-800 text-white rounded-md transition-colors duration-300"
+                    className="flex items-center gap-2 self-start md:self-auto bg-[#D4AF37] hover:bg-white hover:text-[#D4AF37] text-white font-semibold text-sm md:text-base px-5 py-3  transition-all duration-300 whitespace-nowrap"
                     aria-label={`Explore more about ${service.title}`}
                   >
                     Explore more

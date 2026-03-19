@@ -38,7 +38,7 @@ export default function Footer() {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-14 pb-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-6 pb-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 items-start">
 
           {/* ── Brand Column ── */}

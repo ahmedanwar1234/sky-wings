@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -10,11 +11,14 @@ const AboutUs = () => {
 
           {/* Image */}
           <div className="md:w-1/2 mb-8 md:mb-0">
-            <img
-              src="/airplane.jpeg"
+            <Image
+                              quality={75}
+ width={400}
+              height={300}
+              src="/airplane.jpg"
               alt="Airplane"
               className="w-full md:w-[70%] h-64 md:h-170 object-cover rounded-2xl md:rounded-[50px] mx-auto"
-            />
+            ></Image>
           </div>
 
           {/* Text Block */}
