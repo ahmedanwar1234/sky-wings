@@ -11,7 +11,6 @@ const services = [
   { href: "/service/aviation-security", label: "Aviation Security Services" },
   { href: "/service/fuel-supply", label: "Fuel Supply Management" },
   { href: "/service/flight-permits", label: "Flight Permits" },
-  { href: "/service/ground-handling", label: "Ground Handling" },
 ];
 
 const Header = () => {
